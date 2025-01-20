@@ -75,6 +75,9 @@ li {
 .nav-container ul {
   gap: 32px;
 }
+.bars {
+  display: none;
+}
 #nav-link-1 {
   color: var(--secondary-color);
   font-weight: bold;
@@ -296,4 +299,59 @@ footer {
 }
 .social-media .icons {
   gap: 10px;
+}
+
+/* Media Query */
+@media screen and (max-width: 576px) {
+  .nav-container .title,
+  .nav-container ul,
+  .nav-container button,
+  .curriculum i,
+  .main-card {
+    display: none;
+  }
+  .curriculum-container,
+  .story-container,
+  header {
+    width: 90%;
+    margin: 0 auto;
+  }
+  header img {
+    width: 100%;
+  }
+  .bars {
+    display: block;
+  }
+  .banner {
+    flex-direction: column-reverse;
+  }
+  .banner-container {
+    text-align: center;
+  }
+  .curriculum .cards {
+    flex-direction: column;
+  }
+
+  .story-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .story-card h3 {
+    font-size: 0.5rem;
+    padding: 0 22px 17px;
+  }
+  .story-card button {
+    padding: 5px 10px;
+    font-size: 0.5rem;
+    top: -12px;
+    left: 20px;
+  }
+  .story-card img {
+    width: 100%;
+  }
+  .footer-container {
+    gap: 32px;
+    flex-direction: column;
+    padding: 60px 0;
+    margin-left: 20px;
+  }
 }
