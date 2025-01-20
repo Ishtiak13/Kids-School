@@ -15,6 +15,15 @@ body {
   --primary-color: #01acfd;
   --secondary-color: #fea301;
 }
+.btn-clr1 {
+  background-color: #3cd8e8;
+}
+.btn-clr2 {
+  background-color: #95b226;
+}
+.btn-clr3 {
+  background-color: #5d58f0;
+}
 header {
   max-width: 1200px;
   margin: 0 auto;
@@ -28,9 +37,11 @@ button {
   font-weight: bold;
   color: white;
   background-color: #111111;
+  cursor: pointer;
 }
 a {
   text-decoration: none;
+  color: white;
 }
 li {
   list-style: none;
@@ -41,7 +52,12 @@ li {
 .align-items {
   align-items: center;
 }
-
+.curriculum h2,
+.story h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+}
 /* Navigation bar style */
 .nav-container {
   justify-content: space-between;
@@ -109,10 +125,7 @@ li {
   max-width: 1200px;
   margin: 0 auto;
 }
-.curriculum h2 {
-  font-size: 2.8rem;
-  font-weight: bold;
-}
+
 .cards {
   gap: 28px;
   flex-wrap: wrap;
@@ -170,4 +183,117 @@ li {
 .curriculum i {
   size: 6rem;
   cursor: pointer;
+}
+/* Story Section */
+.story {
+  background: url(../assets/bg.png),
+    linear-gradient(white, rgba(254, 161, 1, 0.329));
+}
+.story-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+.story-card {
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  border-radius: 16px;
+  background-color: white;
+}
+.story-card img {
+  border-radius: 16px 16px 0 0;
+}
+.story-card button {
+  font-family: var(--secondary-font);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 15px 18px;
+  border-radius: 48px;
+  position: relative;
+  left: 38px;
+  top: -25px;
+  cursor: default;
+}
+.story-cards {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 80px 0;
+}
+.story-cards h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.main-card h3 {
+  font-size: 1.35rem;
+}
+.main-card p {
+  font-family: var(--secondary-font);
+  color: #666666;
+}
+.main-card {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.main-card img {
+  width: 100%;
+}
+.text-content,
+.story-card p,
+.story-card h3 {
+  padding: 0 38px 34px;
+}
+.story-container .btn {
+  text-align: center;
+}
+/* Footer Style */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+}
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 68px 0 200px;
+  justify-content: space-between;
+}
+.description {
+  max-width: 400px;
+}
+
+.logo-part {
+  gap: 10px;
+}
+.logo-part h2 {
+  line-height: 0.9;
+}
+.logo-part img {
+  width: 82px;
+}
+.description p {
+  font-size: 1.25rem;
+  margin-top: 35px;
+}
+.footer-container h2 {
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+.footer-about h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+.footer-about li {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.social-media h3 {
+  font-size: 1.56rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+.social-media .icons {
+  gap: 10px;
 }
