@@ -1,5 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
+  font-family: "Quicksand", serif;
+}
+/* Shared Style */
+:root {
+  --primary-font: "Quicksand", serif;
+  --secondary-font: "Raleway", serif;
+  --primary-color: #01acfd;
+  --secondary-color: #fea301;
+}
+nav,
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+button {
+  font: inherit;
+  border: none;
+  font-size: 1.25rem;
+  padding: 0.625em 3em;
+  border-radius: 12px;
+  font-weight: bold;
+  color: white;
+  background-color: #111111;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.display-flex {
+  display: flex;
+}
+.align-items {
+  align-items: center;
+}
+
+/* Navigation bar style */
+.nav-container {
+  justify-content: space-between;
+  margin: 16px auto;
+}
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.nav-container a,
+.nav-container button {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.nav-container ul {
+  gap: 32px;
+}
+#nav-link-1 {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+#nav-link-2 {
+  color: var(--primary-color);
+}
+#nav-link-3 {
+  color: #05d4df;
+}
+#nav-link-4 {
+  color: var(--secondary-color);
+}
+.nav-container button {
+  background-color: var(--secondary-color);
+}
+/* Banner Section */
+.banner {
+  justify-content: space-between;
+}
+.banner-container {
+  max-width: 640px;
+}
+.banner-container .banner-title {
+  font-size: 3.9rem;
+  font-weight: bold;
+}
+.banner-title .part-one {
+  color: var(--secondary-color);
+}
+.banner-title .part-two {
+  color: var(--primary-color);
+}
+.banner-container p {
+  font-size: 1.25rem;
+  margin: 24px 0;
 }
