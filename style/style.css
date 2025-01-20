@@ -15,8 +15,7 @@ body {
   --primary-color: #01acfd;
   --secondary-color: #fea301;
 }
-nav,
-section {
+header {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -96,4 +95,79 @@ li {
 .banner-container p {
   font-size: 1.25rem;
   margin: 24px 0;
+}
+
+/* Curriculum Section*/
+.curriculum {
+  text-align: center;
+  padding: 80px 0;
+  background: url(../assets/bg.png);
+  background-size: 95%;
+  background-repeat: no-repeat;
+}
+.curriculum-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.curriculum h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+.cards {
+  gap: 28px;
+  flex-wrap: wrap;
+  margin: 80px 0;
+  align-items: stretch;
+}
+.card {
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5em 3.25em;
+  gap: 32px;
+  border-radius: 18px;
+  box-shadow: 0 0 28px 1px rgba(0, 0, 0, 0.05);
+}
+.cards .part-1 {
+  background: linear-gradient(#def5ff, white 40%);
+  border: 1px solid #def5ff;
+}
+.card .card-btn-1 {
+  background: none;
+  color: #64c8ff;
+  font-size: 1rem;
+}
+.cards .part-2 {
+  background: linear-gradient(#fff4dc, white 40%);
+  border: 1px solid #fff4dc;
+}
+.card .card-btn-2 {
+  background: none;
+  color: #f0aa00;
+  font-size: 1rem;
+}
+.cards .part-3 {
+  background: linear-gradient(#f2e8ff, white 40%);
+  border: 1px solid #def5ff;
+}
+.card .card-btn-3 {
+  background: none;
+  color: #8700ff;
+  font-size: 1rem;
+}
+.card h3 {
+  color: #202020;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.card p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #808080;
+  text-align: justify;
+  text-align-last: center;
+}
+.curriculum i {
+  size: 6rem;
+  cursor: pointer;
 }
