@@ -38,7 +38,26 @@ button {
   color: white;
   background-color: #111111;
   cursor: pointer;
+  transition: color 0.2s, background-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
+button:not(.card button):not(.story-card button):hover {
+  color: #111111;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px 0 #11111134;
+}
+button:not(.card button):not(.story-card button):active {
+  color: #111111b0;
+  background-color: #2020203f;
+  box-shadow: 0 0 20px 0 #11111134;
+  transform: scale(0.9);
+}
+h1,
+h2,
+h3,
+h4 {
+  cursor: default;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -54,7 +73,7 @@ li {
 }
 .curriculum h2,
 .story h2 {
-  font-size: 2.8rem;
+  font-size: clamp(2rem, 5.5vw, 2.8rem);
   font-weight: bold;
   text-align: center;
 }
@@ -81,18 +100,55 @@ li {
 #nav-link-1 {
   color: var(--secondary-color);
   font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+  transition: color 0.2s, background-color 0.2s;
+}
+#nav-link-1:hover {
+  color: white;
+  background-color: var(--secondary-color);
 }
 #nav-link-2 {
   color: var(--primary-color);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+#nav-link-2:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 10px 0 #1111110e;
 }
 #nav-link-3 {
   color: #05d4df;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+#nav-link-3:hover {
+  border-color: #05d4df;
+  box-shadow: 0 0 10px 0 #1111110e;
 }
 #nav-link-4 {
   color: var(--secondary-color);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+#nav-link-4:hover {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 10px 0 #1111110e;
 }
 .nav-container button {
   background-color: var(--secondary-color);
+  transition: transform 0.2s, color 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+.nav-container button:hover {
+  background-color: white;
+
+  box-shadow: 0 0 20px 0 #11111134;
 }
 /* Banner Section */
 .banner {
@@ -102,7 +158,7 @@ li {
   max-width: 640px;
 }
 .banner-container .banner-title {
-  font-size: 3.9rem;
+  font-size: clamp(2rem, 9vw, 3.9rem);
   font-weight: bold;
 }
 .banner-title .part-one {
@@ -115,7 +171,12 @@ li {
   font-size: 1.25rem;
   margin: 24px 0;
 }
-
+.banner img {
+  transition: transform 0.2s ease-in-out;
+}
+.banner img:hover {
+  transform: scale(1.05);
+}
 /* Curriculum Section*/
 .curriculum {
   text-align: center;
@@ -136,6 +197,7 @@ li {
   align-items: stretch;
 }
 .card {
+  cursor: default;
   flex: 1;
   flex-direction: column;
   justify-content: space-between;
@@ -143,6 +205,10 @@ li {
   gap: 32px;
   border-radius: 18px;
   box-shadow: 0 0 28px 1px rgba(0, 0, 0, 0.05);
+  transition: filter 0.2s ease-in-out;
+}
+.cards:hover > .card:not(:hover) {
+  filter: blur(1px) grayscale(1) brightness(0.8);
 }
 .cards .part-1 {
   background: linear-gradient(#def5ff, white 40%);
@@ -187,6 +253,23 @@ li {
   size: 6rem;
   cursor: pointer;
 }
+.curriculum i {
+  font-size: 3rem;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--secondary-color);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.curriculum i:hover {
+  transform: scale(1.2) rotate(360deg);
+  box-shadow: 0 0 10px 0 #1111114d;
+}
+.curriculum i:active {
+  transform: scale(1) rotate(360deg);
+  box-shadow: 0 0 10px 0 #1111114d;
+}
 /* Story Section */
 .story {
   background: url(../assets/bg.png),
@@ -203,6 +286,10 @@ li {
   justify-content: space-between;
   border-radius: 16px;
   background-color: white;
+  transition: transform 0.2s;
+}
+.story-card:hover {
+  transform: scale(1.03);
 }
 .story-card img {
   border-radius: 16px 16px 0 0;
@@ -299,6 +386,11 @@ footer {
 }
 .social-media .icons {
   gap: 10px;
+  transition: transform 0.2s;
+}
+.social-media i:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
 }
 
 /* Media Query */
@@ -312,15 +404,23 @@ footer {
   }
   .curriculum-container,
   .story-container,
-  header {
+  .banner {
     width: 90%;
     margin: 0 auto;
   }
-  header img {
+  .banner img {
     width: 100%;
+  }
+  .nav-container {
+    margin: 0;
+    padding: 10px;
+    border: 0.5px solid var(--secondary-color);
   }
   .bars {
     display: block;
+  }
+  .bars:hover {
+    transform: rotate(90deg);
   }
   .banner {
     flex-direction: column-reverse;
@@ -353,5 +453,38 @@ footer {
     flex-direction: column;
     padding: 60px 0;
     margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 576.1px) and (max-width: 992px) {
+  .nav-container button {
+    display: none;
+  }
+  .curriculum-container,
+  .story-container,
+  .banner {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .banner {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .banner-title {
+    font-size: 1rem;
+  }
+  .curriculum-container .card {
+    flex: 1 1 300px;
+  }
+  .story-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .story-card img {
+    width: 100%;
+  }
+  .story-cards .main-card {
+    grid-column: span 2;
   }
 }
