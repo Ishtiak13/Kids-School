@@ -77,6 +77,15 @@ li {
   font-weight: bold;
   text-align: center;
 }
+
+marquee {
+  font-family: var(--primary-font);
+  font-weight: bold;
+}
+.off {
+  color: red;
+  font-weight: bolder;
+}
 /* Navigation bar style */
 .nav-container {
   justify-content: space-between;
@@ -399,7 +408,8 @@ footer {
   .nav-container ul,
   .nav-container button,
   .curriculum i,
-  .main-card {
+  .main-card,
+  marquee {
     display: none;
   }
   .curriculum-container,
