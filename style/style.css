@@ -497,4 +497,7 @@ footer {
   .story-cards .main-card {
     grid-column: span 2;
   }
+  .footer-container {
+    margin: 0 20px;
+  }
 }
